@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tirage au Sort</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="app-title">Tirage au Sort</h1>
+    
+    <!-- Bouton pour ouvrir la fenêtre modale -->
+    <button id="open-instructions">Comment utiliser l'application</button>
+
+    <!-- Formulaire pour le titre -->
+    <div class="form-group">
+      <label for="title">Titre :</label>
+      <input type="text" id="title" placeholder="Entrez un titre pour votre tirage au sort" />
+    </div>
+
+    <!-- Formulaire pour les utilisateurs -->
+    <div class="form-group">
+      <label for="users">Utilisateurs :</label>
+      <textarea id="users" placeholder="Entrez les noms des utilisateurs (un par ligne)"></textarea>
+    </div>
+
+    <!-- Formulaire pour les catégories -->
+    <div class="form-group">
+      <label for="categories">Catégories (optionnel) :</label>
+      <textarea id="categories" placeholder="Entrez les catégories (une par ligne)"></textarea>
+    </div>
+
+    <!-- Boutons -->
+    <button id="draw-button">Tirer au sort</button>
+    <button id="print-button" style="display: none;">Imprimer</button>
+
+    <!-- Résultats -->
+    <div id="results"></div>
+
+    <!-- Fenêtre modale pour les instructions -->
+    <div id="instructions-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Comment utiliser cette application :</h2>
+        <ol>
+          <li>Entrez un titre pour votre tirage au sort dans le champ "Titre".</li>
+          <li>Dans la zone "Utilisateurs", entrez un nom par ligne pour chaque participant.</li>
+          <li>Dans la zone "Catégories", entrez une catégorie par ligne. Si vous laissez cette zone vide, des catégories seront automatiquement créées en fonction du nombre d'utilisateurs.</li>
+          <li>Cliquez sur le bouton "Tirer au sort" pour effectuer le tirage.</li>
+          <li>Les résultats s'afficheront dans un tableau en dessous.</li>
+          <li>Utilisez le bouton "Imprimer" pour imprimer ou sauvegarder les résultats.</li>
+        </ol>
+        <p><strong>Note :</strong> Chaque utilisateur sera assigné à une catégorie de manière aléatoire. Si le nombre d'utilisateurs dépasse le nombre de catégories, les catégories seront réutilisées de manière cyclique.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
